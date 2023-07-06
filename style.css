@@ -1,0 +1,55 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #010718;
+  overflow: hidden;
+}
+
+.container {
+  width: 100vw;
+  text-align: center;
+  overflow: hidden;
+}
+
+.container .text {
+  position: relative;
+  color: #4070f4;
+  font-size: 30px;
+  font-weight: 600;
+}
+
+.container .text.first-text {
+  color: #fff;
+}
+
+.text.sec-text:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: #010718;
+  border-left: 2px solid #4070f4;
+  animation: animate 3s steps(12) infinite;
+  /* if 23 set here x second, then in the script set time intervals as multiples of x times 1000 */
+}
+
+@keyframes animate {
+  40%,
+  60% {
+    left: 100%;
+  }
+  100% {
+    left: 0;
+  }
+}
